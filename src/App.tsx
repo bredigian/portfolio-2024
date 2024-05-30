@@ -1,7 +1,7 @@
 import Header from '@/sections/header';
-import Projects from './sections/projects';
-import Skills from './sections/skills';
-import Social from './sections/social';
+import Projects from '@/sections/projects';
+import Skills from '@/sections/skills';
+import Social from '@/sections/social';
 
 export default function App() {
   return (
