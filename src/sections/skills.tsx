@@ -8,7 +8,7 @@ export default function Skills() {
       <span className='opacity-75'>
         Tecnologías en las que me especializo y utilizo día a día para trabajar
       </span>
-      <ul className='flex flex-wrap justify-center gap-6'>
+      <ul className='flex flex-wrap justify-center gap-4'>
         {SKILLS.map((skill) => (
           <li
             key={skill.name + '_key'}
