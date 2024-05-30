@@ -1,4 +1,5 @@
 import Header from '@/sections/header';
+import Me from '@/sections/me';
 import Projects from '@/sections/projects';
 import Skills from '@/sections/skills';
 import Social from '@/sections/social';
@@ -9,6 +10,7 @@ export default function App() {
       <Header />
       <Skills />
       <Projects />
+      <Me />
       <Social />
     </main>
   );

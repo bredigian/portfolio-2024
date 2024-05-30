@@ -16,7 +16,7 @@ export default function Projects() {
   const [active, setActive] = useState<TProject>(PROJECTS[0]);
 
   return (
-    <section className='relative flex flex-col gap-8'>
+    <section id='#projects' className='relative flex flex-col gap-8'>
       <div className='flex flex-col gap-4 px-8 pt-8'>
         <Title>Proyectos</Title>
         <span className='opacity-75'>

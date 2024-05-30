@@ -3,7 +3,7 @@ import { Title } from '@/components/ui/title';
 
 export default function Skills() {
   return (
-    <section className='flex flex-col gap-4 p-8'>
+    <section id='#skills' className='flex flex-col gap-4 p-8'>
       <Title>Habilidades</Title>
       <span className='opacity-75'>
         Tecnologías en las que me especializo y utilizo día a día para trabajar

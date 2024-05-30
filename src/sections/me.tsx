@@ -4,7 +4,7 @@ import me2 from '@/assets/me-2.jpg';
 
 export default function Me() {
   return (
-    <section className='flex flex-col gap-4 p-8'>
+    <section id='#me' className='flex flex-col gap-4 p-8'>
       <Title>Yo</Title>
       <span className='opacity-75'>Este soy yo.</span>
       <img
