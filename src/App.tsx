@@ -2,7 +2,6 @@ import Home from '@/sections/home';
 import Me from '@/sections/me';
 import Projects from '@/sections/projects';
 import Skills from '@/sections/skills';
-import Social from '@/sections/social';
 
 export default function App() {
   return (
@@ -11,7 +10,6 @@ export default function App() {
       <Skills />
       <Projects />
       <Me />
-      <Social />
     </main>
   );
 }
