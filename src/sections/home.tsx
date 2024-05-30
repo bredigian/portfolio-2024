@@ -1,7 +1,7 @@
 import { Title } from '@/components/ui/title';
 import me1 from '@/assets/me-1.jpg';
 
-export default function Header() {
+export default function Home() {
   return (
     <section id='#home' className='flex flex-col gap-4 p-8'>
       <span className='text-2xl opacity-75'>¡Hola! Soy</span>
