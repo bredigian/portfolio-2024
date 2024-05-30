@@ -201,14 +201,6 @@ export const PROJECTS: TProject[] = [
     ],
   },
   {
-    name: 'Casatomada - App',
-    description: 'Mobile app developed with React Native, Redux, and Firebase',
-    description_es:
-      'Aplicación móvil desarrollada con React Native, Redux y Firebase',
-    url: 'https://expo.dev/@bredigian/appCasatomada',
-    date: new Date(2022, 12, 22),
-  },
-  {
     name: 'Iluminarte',
     description:
       'Candle website developed with React, Tailwind, NodeJS, and MySQL',

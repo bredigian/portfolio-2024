@@ -4,13 +4,12 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
+import { TGalleryImage, TProject } from '@/types/projects.types';
 
 import { Button } from '@/components/ui/button';
 import { PROJECTS } from '@/const/projects';
 import { ProjectGallery } from '@/components/carousel';
-import { TProject } from '@/types/projects.types';
 import { Title } from '@/components/ui/title';
-import { cn } from '@/lib/utils';
 import { useState } from 'react';
 
 export default function Projects() {
@@ -49,25 +48,12 @@ export default function Projects() {
           </CardHeader>
         </Card>
       </div>
-      {PROJECTS.map((project) => {
-        if (!project.gallery)
-          return (
-            <span
-              className={cn(
-                'px-8 pb-8',
-                active === project ? 'block' : 'hidden',
-              )}
-            >
-              No hay imágenes disponibles para este proyecto.
-            </span>
-          );
-        return (
-          <ProjectGallery
-            active={active === project}
-            gallery={project.gallery}
-          />
-        );
-      })}
+      {PROJECTS.map((project) => (
+        <ProjectGallery
+          active={active === project}
+          gallery={project.gallery as TGalleryImage[]}
+        />
+      ))}
     </section>
   );
 }

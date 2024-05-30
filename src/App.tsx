@@ -5,7 +5,7 @@ import Social from '@/sections/social';
 
 export default function App() {
   return (
-    <main className='flex flex-col gap-16'>
+    <main className='mx-auto flex w-full max-w-screen-lg flex-col items-center gap-16'>
       <Header />
       <Skills />
       <Projects />

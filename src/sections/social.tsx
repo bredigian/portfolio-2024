@@ -4,7 +4,7 @@ import { Title } from '@/components/ui/title';
 
 export default function Social() {
   return (
-    <section className='flex flex-col gap-4 p-8'>
+    <section className='flex w-full flex-col gap-4 p-8'>
       <Title>Más información</Title>
       <span className='opacity-75'>
         A continuación estarán los links a mis redes sociales y a mi CV.
