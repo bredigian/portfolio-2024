@@ -6,12 +6,14 @@ import {
 } from '@/components/ui/card';
 
 import { Button } from '@/components/ui/button';
+import { FaFileArrowDown } from 'react-icons/fa6';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { PROJECTS } from '@/const/projects';
 import { ProjectGallery } from './components/carousel';
 import { ReloadIcon } from '@radix-ui/react-icons';
 import { SKILLS } from '@/const/skills';
+import { SOCIAL } from './const/social';
 import { TForm } from './types/form.types';
 import { TProject } from './types/projects.types';
 import { Textarea } from '@/components/ui/textarea';
@@ -201,6 +203,26 @@ export default function App() {
             )}
           </Button>
         </form>
+      </section>
+      <section className='flex flex-col gap-4 p-8'>
+        <Title>Más información</Title>
+        <span className='opacity-75'>
+          A continuación estarán los links a mis redes sociales y a mi CV.
+        </span>
+        <ul className='flex items-center gap-4'>
+          {SOCIAL.map((item) => (
+            <li key={item.name + '_key'}>
+              <a href={item.url} target='_blank'>
+                <item.icon size={30} />
+              </a>
+            </li>
+          ))}
+          <li>
+            <a href='' target='_blank'>
+              <FaFileArrowDown size={30} />
+            </a>
+          </li>
+        </ul>
       </section>
     </main>
   );
