@@ -5,18 +5,31 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import { TGalleryImage, TProject } from '@/types/projects.types';
+import { useEffect, useState } from 'react';
 
 import { Button } from '@/components/ui/button';
 import { PROJECTS } from '@/const/projects';
 import { ProjectGallery } from '@/components/carousel';
 import { Title } from '@/components/ui/title';
-import { useState } from 'react';
 
 export default function Projects() {
   const [active, setActive] = useState<TProject>(PROJECTS[0]);
 
+  const [height, setHeight] = useState(100);
+
+  useEffect(() => {
+    const nav = document.getElementById('navbar');
+    if (nav) setHeight(nav.offsetHeight);
+  }, []);
+
   return (
-    <section id='#projects' className='relative flex flex-col gap-8'>
+    <section
+      id='#projects'
+      className='relative flex flex-col gap-8'
+      style={{
+        minHeight: `${100 - (100 - height)}vh`,
+      }}
+    >
       <div className='flex flex-col gap-4 px-8 pt-8'>
         <Title>Proyectos</Title>
         <span className='opacity-75'>
