@@ -6,16 +6,39 @@ import {
 } from '@/components/ui/card';
 
 import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
 import { PROJECTS } from '@/const/projects';
 import { ProjectGallery } from './components/carousel';
+import { ReloadIcon } from '@radix-ui/react-icons';
 import { SKILLS } from '@/const/skills';
+import { TForm } from './types/form.types';
 import { TProject } from './types/projects.types';
+import { Textarea } from '@/components/ui/textarea';
 import { Title } from '@/components/ui/title';
 import me1 from '@/assets/me-1.jpg';
+import me2 from '@/assets/me-2.jpg';
+import { toast } from 'sonner';
+import { useForm } from 'react-hook-form';
 import { useState } from 'react';
 
 export default function App() {
   const [active, setActive] = useState<TProject>(PROJECTS[0]);
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors, isSubmitting, isValid },
+  } = useForm<TForm>();
+
+  const onSubmit = async (values: TForm) => {
+    try {
+      console.log(values);
+      toast.success('Email enviado exitosamente.', { position: 'top-center' });
+    } catch (error) {
+      if (error instanceof Error) toast.error(error.message);
+    }
+  };
 
   return (
     <main className='flex flex-col gap-16'>
@@ -41,7 +64,7 @@ export default function App() {
       </section>
       <section className='flex flex-col gap-4 p-8'>
         <Title>Habilidades</Title>
-        <span>
+        <span className='opacity-75'>
           Tecnologías en las que me especializo y utilizo día a día para
           trabajar
         </span>
@@ -60,11 +83,11 @@ export default function App() {
       <section className='flex flex-col gap-8'>
         <div className='flex flex-col gap-4 px-8 pt-8'>
           <Title>Proyectos</Title>
-          <span>
+          <span className='opacity-75'>
             Trabajos y proyectos personales que he desarrollado a lo largo de mi
             carrera que me han llevado al nivel actual de experiencia
           </span>
-          <small>
+          <small className='opacity-75'>
             Seleccione el que desee para ver información acerca del mismo
           </small>
           <ul className='flex flex-wrap justify-start gap-4'>
@@ -96,6 +119,88 @@ export default function App() {
             No hay imágenes disponibles para este proyecto.
           </span>
         )}
+      </section>
+      <section className='flex flex-col gap-4 p-8'>
+        <Title>Yo</Title>
+        <span className='opacity-75'>Este soy yo.</span>
+        <img
+          src={me2}
+          className='h-72 w-full rounded-2xl object-cover'
+          alt='Gianluca Bredice Vivarelli'
+        />
+        <span className='opacity-75'>
+          Una persona organizada y responsable, quien esta constantemente
+          aprendiendo, y además pasa gran parte del día escuchando música con
+          auriculares. Mi idioma nativo es el Español y mi nivel de Inglés es
+          básico. Actualmente estoy trabajando como freelancer, pero sigo
+          abierto a posibilidades de trabajo estable, en el cual pueda aportar
+          mis habilidades al equipo de trabajo y también aprender de ellos.
+        </span>
+        <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col gap-4'>
+          <Label htmlFor='form'>Contactame</Label>
+          <div className='grid grid-cols-6 gap-4'>
+            <div className='col-span-3 flex flex-col gap-2'>
+              <Input
+                id='form'
+                {...register('name', {
+                  required: {
+                    value: true,
+                    message: 'El nombre es requerido.',
+                  },
+                })}
+                className='w-full'
+                placeholder='Nombre'
+              />
+              {errors?.name && (
+                <small className='text-red-500'>{errors?.name.message}</small>
+              )}
+            </div>
+            <div className='col-span-3 flex flex-col gap-2'>
+              <Input
+                {...register('email', {
+                  required: {
+                    value: true,
+                    message: 'El email es requerido.',
+                  },
+                })}
+                className='w-full'
+                placeholder='Email'
+              />
+              {errors?.email && (
+                <small className='text-red-500'>{errors.email.message}</small>
+              )}
+            </div>
+            <div className='col-span-6 flex flex-col gap-2'>
+              <Textarea
+                {...register('message', {
+                  required: {
+                    value: true,
+                    message: 'El mensaje es requerido.',
+                  },
+                  minLength: {
+                    value: 25,
+                    message: 'El mensaje debe contener al menos 25 caracteres.',
+                  },
+                })}
+                className='w-full'
+                placeholder='Mensaje'
+              />
+              {errors?.message && (
+                <small className='text-red-500'>{errors.message.message}</small>
+              )}
+            </div>
+          </div>
+          <Button type='submit' disabled={!isValid}>
+            {isSubmitting ? (
+              <>
+                <ReloadIcon className='mr-2 animate-spin' />
+                Enviando
+              </>
+            ) : (
+              'Enviar'
+            )}
+          </Button>
+        </form>
       </section>
     </main>
   );
