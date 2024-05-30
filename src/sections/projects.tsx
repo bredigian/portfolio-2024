@@ -10,13 +10,14 @@ import { PROJECTS } from '@/const/projects';
 import { ProjectGallery } from '@/components/carousel';
 import { TProject } from '@/types/projects.types';
 import { Title } from '@/components/ui/title';
+import { cn } from '@/lib/utils';
 import { useState } from 'react';
 
 export default function Projects() {
   const [active, setActive] = useState<TProject>(PROJECTS[0]);
 
   return (
-    <section className='flex flex-col gap-8'>
+    <section className='relative flex flex-col gap-8'>
       <div className='flex flex-col gap-4 px-8 pt-8'>
         <Title>Proyectos</Title>
         <span className='opacity-75'>
@@ -48,13 +49,25 @@ export default function Projects() {
           </CardHeader>
         </Card>
       </div>
-      {active?.gallery ? (
-        <ProjectGallery gallery={active.gallery} />
-      ) : (
-        <span className='px-8 pb-8'>
-          No hay imágenes disponibles para este proyecto.
-        </span>
-      )}
+      {PROJECTS.map((project) => {
+        if (!project.gallery)
+          return (
+            <span
+              className={cn(
+                'px-8 pb-8',
+                active === project ? 'block' : 'hidden',
+              )}
+            >
+              No hay imágenes disponibles para este proyecto.
+            </span>
+          );
+        return (
+          <ProjectGallery
+            active={active === project}
+            gallery={project.gallery}
+          />
+        );
+      })}
     </section>
   );
 }
