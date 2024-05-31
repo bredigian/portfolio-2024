@@ -1,10 +1,10 @@
+import { Button } from './ui/button';
 import { FaFileArrowDown } from 'react-icons/fa6';
 import { SOCIAL } from '@/const/social';
-import { Separator } from './ui/separator';
 
 export default function Footer() {
   return (
-    <footer className='flex flex-col gap-4 bg-primary p-8'>
+    <footer className='flex flex-col items-center gap-4 bg-primary p-8'>
       <span className='text-xl font-bold text-primary-foreground'>
         Redes sociales
       </span>
@@ -21,19 +21,18 @@ export default function Footer() {
             </a>
           </li>
         ))}
-        <Separator className='opacity-20' />
-        <li>
-          <a
-            href=''
-            target='_blank'
-            className='flex items-center gap-4 text-primary-foreground opacity-75'
-          >
-            <FaFileArrowDown size={24} />
-            <span>CV</span>
-          </a>
-        </li>
       </ul>
-      <span className='mt-12 font-semibold text-primary-foreground opacity-75'>
+      <Button variant='secondary' className='mt-4'>
+        <a
+          href=''
+          target='_blank'
+          className='flex items-center gap-4 text-primary'
+        >
+          <FaFileArrowDown size={24} />
+          <span>CV</span>
+        </a>
+      </Button>
+      <span className='mt-4 font-semibold text-primary-foreground opacity-75'>
         Gianluca Bredice Vivarelli | Portfolio
       </span>
     </footer>

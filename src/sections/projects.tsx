@@ -25,12 +25,12 @@ export default function Projects() {
   return (
     <section
       id='#projects'
-      className='relative flex flex-col gap-8'
+      className='relative flex flex-col items-center gap-8 md:items-start'
       style={{
         minHeight: `${100 - (100 - height)}vh`,
       }}
     >
-      <div className='flex flex-col gap-4 px-8 pt-8'>
+      <div className='flex flex-col items-center gap-4 px-8 pt-8 text-center md:items-start md:text-start'>
         <Title>Proyectos</Title>
         <span className='opacity-75'>
           Trabajos y proyectos personales que he desarrollado a lo largo de mi
@@ -39,7 +39,7 @@ export default function Projects() {
         <small className='opacity-75'>
           Seleccione el que desee para ver información acerca del mismo
         </small>
-        <ul className='flex flex-wrap justify-start gap-4'>
+        <ul className='flex flex-wrap justify-center gap-4'>
           {PROJECTS.sort((a, b) => {
             return b.date.getTime() - a.date.getTime();
           }).map((project) => (
@@ -48,6 +48,7 @@ export default function Projects() {
                 size='sm'
                 variant={active === project ? 'default' : 'outline'}
                 onClick={() => setActive(project)}
+                className='min-w-32'
               >
                 {project.name}
               </Button>

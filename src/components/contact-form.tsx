@@ -24,9 +24,14 @@ export default function ContactForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col gap-4'>
-      <Label htmlFor='form'>Contactame</Label>
-      <div className='grid grid-cols-6 gap-4'>
+    <form
+      onSubmit={handleSubmit(onSubmit)}
+      className='flex w-full max-w-[420px] flex-col items-center gap-4 md:items-end'
+    >
+      <Label htmlFor='form' className='md:text-base'>
+        Contactame
+      </Label>
+      <div className='grid w-full grid-cols-6 gap-4'>
         <div className='col-span-3 flex flex-col gap-2'>
           <Input
             id='form'
@@ -36,7 +41,7 @@ export default function ContactForm() {
                 message: 'El nombre es requerido.',
               },
             })}
-            className='w-full'
+            className='w-full lg:text-base'
             placeholder='Nombre'
           />
           {errors?.name && (
@@ -51,7 +56,7 @@ export default function ContactForm() {
                 message: 'El email es requerido.',
               },
             })}
-            className='w-full'
+            className='w-full lg:text-base'
             placeholder='Email'
           />
           {errors?.email && (
@@ -70,7 +75,7 @@ export default function ContactForm() {
                 message: 'El mensaje debe contener al menos 25 caracteres.',
               },
             })}
-            className='w-full'
+            className='w-full lg:text-base'
             placeholder='Mensaje'
           />
           {errors?.message && (
@@ -78,7 +83,7 @@ export default function ContactForm() {
           )}
         </div>
       </div>
-      <Button type='submit' disabled={!isValid}>
+      <Button type='submit' disabled={!isValid} className='w-full lg:text-base'>
         {isSubmitting ? (
           <>
             <ReloadIcon className='mr-2 animate-spin' />

@@ -26,12 +26,12 @@ export const ProjectGallery = ({ gallery, active }: Props) => {
               key={slide.url_desktop + slide.url_mobile}
             >
               <img
-                className='embla__slide__img hidden w-full rounded-xl border-2 object-cover md:block'
+                className='embla__slide__img hidden w-full rounded-xl border-2 object-cover sm:block'
                 src={slide.url_desktop}
                 alt='Your alt text'
               />
               <img
-                className='embla__slide__img my-4 w-full rounded-xl border-2 object-cover md:hidden'
+                className='embla__slide__img my-4 w-full rounded-xl border-2 object-cover sm:hidden'
                 src={slide.url_mobile}
                 alt='Your alt text'
               />
