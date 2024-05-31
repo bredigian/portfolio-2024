@@ -1,3 +1,8 @@
+import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { useCallback, useEffect, useState } from 'react';
+
+import { Button } from './ui/button';
+import { EmblaCarouselType } from 'embla-carousel';
 import { TGalleryImage } from '@/types/projects.types';
 import { cn } from '@/lib/utils';
 import useEmblaCarousel from 'embla-carousel-react';
@@ -8,7 +13,34 @@ type Props = {
 };
 
 export const ProjectGallery = ({ gallery, active }: Props) => {
-  const [emblaRef] = useEmblaCarousel({ loop: false });
+  const [emblaRef, emblaApi] = useEmblaCarousel({
+    loop: false,
+  });
+
+  const [prevBtnDisabled, setPrevBtnDisabled] = useState(true);
+  const [nextBtnDisabled, setNextBtnDisabled] = useState(true);
+
+  const onPrevButtonClick = useCallback(() => {
+    if (!emblaApi) return;
+    emblaApi.scrollPrev();
+  }, [emblaApi]);
+
+  const onNextButtonClick = useCallback(() => {
+    if (!emblaApi) return;
+    emblaApi.scrollNext();
+  }, [emblaApi]);
+
+  const onSelect = useCallback((emblaApi: EmblaCarouselType) => {
+    setPrevBtnDisabled(!emblaApi.canScrollPrev());
+    setNextBtnDisabled(!emblaApi.canScrollNext());
+  }, []);
+
+  useEffect(() => {
+    if (!emblaApi) return;
+
+    onSelect(emblaApi);
+    emblaApi.on('reInit', onSelect).on('select', onSelect);
+  }, [emblaApi, onSelect]);
 
   return (
     <div
@@ -40,27 +72,24 @@ export const ProjectGallery = ({ gallery, active }: Props) => {
           ))}
         </div>
       </div>
-
-      {/*379x788*/}
-
-      {/* <div className='embla__controls'>
-        <div className='embla__buttons'>
-          <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
-          <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
-        </div>
-
-        <div className='embla__dots'>
-          {scrollSnaps.map((_, index) => (
-            <DotButton
-              key={index}
-              onClick={() => onDotButtonClick(index)}
-              className={'embla__dot'.concat(
-                index === selectedIndex ? ' embla__dot--selected' : '',
-              )}
-            />
-          ))}
-        </div>
-      </div> */}
+      <div className='embla__controls flex flex-row items-center justify-center gap-2 p-4 md:justify-start'>
+        <Button
+          onClick={onPrevButtonClick}
+          disabled={prevBtnDisabled}
+          variant='outline'
+          size={'icon'}
+        >
+          <ChevronLeft />
+        </Button>
+        <Button
+          onClick={onNextButtonClick}
+          disabled={nextBtnDisabled}
+          variant='outline'
+          size={'icon'}
+        >
+          <ChevronRight />
+        </Button>
+      </div>
     </div>
   );
 };
