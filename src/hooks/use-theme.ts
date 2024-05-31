@@ -20,8 +20,8 @@ export const useTheme = () => {
 
   useEffect(() => {
     if (theme === 'dark')
-      document.getElementById('root')?.classList.add('dark');
-    else document.getElementById('root')?.classList.remove('dark');
+      document.getElementById('body')?.classList.add('dark');
+    else document.getElementById('body')?.classList.remove('dark');
   }, [theme]);
 
   return {

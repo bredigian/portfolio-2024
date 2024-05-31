@@ -73,4 +73,38 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  body {
+    --sb-light-color: #f8fafc;
+    --sb-dark-color: #0f172a;
+    --sb-size: 8px;
+  }
+
+  body::-webkit-scrollbar {
+    width: var(--sb-size);
+  }
+
+  body::-webkit-scrollbar-track {
+    background: var(--sb-light-color);
+    border-radius: 4px;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background: var(--sb-dark-color);
+    border-radius: 4px;
+  }
+
+  .dark::-webkit-scrollbar {
+    width: var(--sb-size);
+  }
+
+  .dark::-webkit-scrollbar-track {
+    background: var(--sb-dark-color);
+    border-radius: 4px;
+  }
+
+  .dark::-webkit-scrollbar-thumb {
+    background: var(--sb-light-color);
+    border-radius: 4px;
+  }
 }
