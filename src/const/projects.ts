@@ -25,6 +25,11 @@ import mbpeluqueria2 from '@/assets/screenshots/mbpeluqueria/mb-2.png';
 import mbpeluqueria3 from '@/assets/screenshots/mbpeluqueria/mb-3.png';
 import mbpeluqueria4 from '@/assets/screenshots/mbpeluqueria/mb-4.png';
 import mbpeluqueria5 from '@/assets/screenshots/mbpeluqueria/mb-5.png';
+import mbpeluqueriaMobile1 from '@/assets/screenshots/mbpeluqueria/mobile/mb-1.png';
+import mbpeluqueriaMobile2 from '@/assets/screenshots/mbpeluqueria/mobile/mb-2.png';
+import mbpeluqueriaMobile3 from '@/assets/screenshots/mbpeluqueria/mobile/mb-3.png';
+import mbpeluqueriaMobile4 from '@/assets/screenshots/mbpeluqueria/mobile/mb-4.png';
+import mbpeluqueriaMobile5 from '@/assets/screenshots/mbpeluqueria/mobile/mb-5.png';
 //Megallon Images
 import megallon1 from '@/assets/screenshots/megallon/megallon-1.png';
 import megallon10 from '@/assets/screenshots/megallon/megallon-10.png';
@@ -86,32 +91,32 @@ export const PROJECTS: TProject[] = [
     gallery: [
       {
         url_desktop: mbpeluqueria1,
-        url_mobile: mbpeluqueria1,
+        url_mobile: mbpeluqueriaMobile1,
       },
       {
         url_desktop: mbpeluqueria2,
-        url_mobile: mbpeluqueria3,
+        url_mobile: mbpeluqueriaMobile2,
       },
       {
         url_desktop: mbpeluqueria3,
-        url_mobile: mbpeluqueria3,
+        url_mobile: mbpeluqueriaMobile3,
       },
       {
         url_desktop: mbpeluqueria4,
-        url_mobile: mbpeluqueria4,
+        url_mobile: mbpeluqueriaMobile4,
       },
       {
         url_desktop: mbpeluqueria5,
-        url_mobile: mbpeluqueria5,
+        url_mobile: mbpeluqueriaMobile5,
       },
     ],
   },
   {
     name: 'Megallón',
     description:
-      'Manager system for vegan food place developed with Next.js, Tailwind, Shadcn/ui, Prisma, and Nest.js.',
+      'Manager system for food place developed with Next.js, Tailwind, Shadcn/ui, Prisma, and Nest.js.',
     description_es:
-      'Sistema de administracion para un lugar de comida vegana desarrollado con Next.js, Tailwind, Shadcn/ui, Prisma y Nest.js',
+      'Sistema de administracion financiera para cocina desarrollado con Next.js, Tailwind, Shadcn/ui, Prisma y Nest.js',
     url: undefined,
     date: new Date(2024, 1, 22),
     gallery: [
