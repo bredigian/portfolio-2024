@@ -6,6 +6,7 @@ import { TForm } from '@/types/form.types';
 import { Textarea } from '@/components/ui/textarea';
 import { toast } from 'sonner';
 import { useForm } from 'react-hook-form';
+import { useLang } from '@/hooks/use-lang';
 
 export default function ContactForm() {
   const {
@@ -23,13 +24,15 @@ export default function ContactForm() {
     }
   };
 
+  const { LANG } = useLang();
+
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
       className='flex w-full max-w-[420px] flex-col items-center gap-4 md:items-end'
     >
       <Label htmlFor='form' className='md:text-base'>
-        Contactame
+        {LANG.ABOUT.LABEL}
       </Label>
       <div className='grid w-full grid-cols-6 gap-4'>
         <div className='col-span-3 flex flex-col gap-2'>
@@ -42,10 +45,12 @@ export default function ContactForm() {
               },
             })}
             className='w-full lg:text-base'
-            placeholder='Nombre'
+            placeholder={LANG.ABOUT.FORM.NAME}
           />
           {errors?.name && (
-            <small className='text-red-500'>{errors?.name.message}</small>
+            <small className='text-red-500'>
+              {LANG.ABOUT.FORM.ATTRIBUTE_REQUIRED}
+            </small>
           )}
         </div>
         <div className='col-span-3 flex flex-col gap-2'>
@@ -57,10 +62,12 @@ export default function ContactForm() {
               },
             })}
             className='w-full lg:text-base'
-            placeholder='Email'
+            placeholder={LANG.ABOUT.FORM.EMAIL}
           />
           {errors?.email && (
-            <small className='text-red-500'>{errors.email.message}</small>
+            <small className='text-red-500'>
+              {LANG.ABOUT.FORM.ATTRIBUTE_REQUIRED}
+            </small>
           )}
         </div>
         <div className='col-span-6 flex flex-col gap-2'>
@@ -76,10 +83,12 @@ export default function ContactForm() {
               },
             })}
             className='w-full resize-none lg:text-base'
-            placeholder='Mensaje'
+            placeholder={LANG.ABOUT.FORM.MESSAGE}
           />
           {errors?.message && (
-            <small className='text-red-500'>{errors.message.message}</small>
+            <small className='text-red-500'>
+              {LANG.ABOUT.FORM.ATTRIBUTE_REQUIRED}
+            </small>
           )}
         </div>
       </div>
@@ -87,10 +96,10 @@ export default function ContactForm() {
         {isSubmitting ? (
           <>
             <ReloadIcon className='mr-2 animate-spin' />
-            Enviando
+            {LANG.ABOUT.FORM.SUBMITTING}
           </>
         ) : (
-          'Enviar'
+          LANG.ABOUT.FORM.SUBMIT
         )}
       </Button>
     </form>

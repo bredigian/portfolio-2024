@@ -11,6 +11,7 @@ import { Button } from '@/components/ui/button';
 import { PROJECTS } from '@/const/projects';
 import { ProjectGallery } from '@/components/carousel';
 import { Title } from '@/components/ui/title';
+import { useLang } from '@/hooks/use-lang';
 
 export default function Projects() {
   const [active, setActive] = useState<TProject>(PROJECTS[0]);
@@ -22,6 +23,8 @@ export default function Projects() {
     if (nav) setHeight(nav.offsetHeight);
   }, []);
 
+  const { LANG, isEng } = useLang();
+
   return (
     <section
       id='#projects'
@@ -31,14 +34,9 @@ export default function Projects() {
       }}
     >
       <div className='flex flex-col items-center gap-4 px-8 pt-8 text-center md:items-start md:text-start'>
-        <Title>Proyectos</Title>
-        <span className='opacity-75'>
-          Trabajos y proyectos personales que he desarrollado a lo largo de mi
-          carrera que me han llevado al nivel actual de experiencia
-        </span>
-        <small className='opacity-75'>
-          Seleccione el que desee para ver información acerca del mismo
-        </small>
+        <Title>{LANG.PROJECTS.TITLE}</Title>
+        <span className='opacity-75'>{LANG.PROJECTS.SUBTITLE}</span>
+        <small className='opacity-75'>{LANG.PROJECTS.TOOLTIP}</small>
         <ul className='flex flex-wrap justify-center gap-4'>
           {PROJECTS.sort((a, b) => {
             return b.date.getTime() - a.date.getTime();
@@ -58,7 +56,9 @@ export default function Projects() {
         <Card>
           <CardHeader className='flex flex-col gap-4'>
             <CardTitle>{active?.name}</CardTitle>
-            <CardDescription>{active?.description_es}</CardDescription>
+            <CardDescription>
+              {!isEng ? active?.description_es : active?.description}
+            </CardDescription>
           </CardHeader>
         </Card>
       </div>

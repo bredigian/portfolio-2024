@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 
 import { SKILLS } from '@/const/skills';
 import { Title } from '@/components/ui/title';
+import { useLang } from '@/hooks/use-lang';
 
 export default function Skills() {
   const [height, setHeight] = useState(100);
@@ -10,6 +11,8 @@ export default function Skills() {
     const nav = document.getElementById('navbar');
     if (nav) setHeight(nav.offsetHeight);
   }, []);
+
+  const { LANG } = useLang();
 
   return (
     <section
@@ -20,11 +23,8 @@ export default function Skills() {
       }}
     >
       <div className='flex flex-col items-center gap-4 text-center md:items-start md:text-start'>
-        <Title>Habilidades</Title>
-        <span className='opacity-75 lg:text-lg'>
-          Tecnologías en las que me especializo y utilizo día a día para llevar
-          a cabo mis proyectos.
-        </span>
+        <Title>{LANG.SKILLS.TITLE}</Title>
+        <span className='opacity-75 lg:text-lg'>{LANG.SKILLS.SUBTITLE}</span>
       </div>
       <ul className='grid max-w-96 grid-cols-4 gap-4 md:min-w-96'>
         {SKILLS.map((skill) => (

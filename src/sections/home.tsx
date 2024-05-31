@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 
 import TitleSlider from '@/components/title-slider';
 import me1 from '@/assets/me-1.jpg';
+import { useLang } from '@/hooks/use-lang';
 
 export default function Home() {
   const [height, setHeight] = useState(100);
@@ -10,6 +11,8 @@ export default function Home() {
     const nav = document.getElementById('navbar');
     if (nav) setHeight(nav.offsetHeight);
   }, []);
+
+  const { LANG } = useLang();
 
   return (
     <section
@@ -20,19 +23,16 @@ export default function Home() {
       }}
     >
       <div className='flex flex-col items-center gap-4 text-center md:items-start md:text-start'>
-        <span className='text-2xl opacity-75 lg:text-3xl'>¡Hola! Soy</span>
+        <span className='text-2xl opacity-75 lg:text-3xl'>
+          {LANG.HOME.TITLE}
+        </span>
         <TitleSlider />
         <span className='text-lg opacity-75 lg:text-xl'>
-          Mi nombre es <b>Gianluca Bredice Vivarelli</b>, tengo 22 años y soy de
-          Argentina.
+          {LANG.HOME.SUBTITLE[0]}
+          <b>{LANG.HOME.SUBTITLE[1]}</b>
+          {LANG.HOME.SUBTITLE[2]}
         </span>
-        <p className='opacity-75 lg:text-lg'>
-          Actualmente vivo en La Plata, inicié mi carrera orientada a sistemas
-          en 2020 y a principios del 2022 emprendí camino como desarrollador
-          web. Tomando diferentes cursos y estudiando de forma autonoma, fui
-          aprendiendo y especializandome en las diferentes tecnologias que se
-          utilizan hoy en día.
-        </p>
+        <p className='opacity-75 lg:text-lg'>{LANG.HOME.DESCRIPTION}</p>
       </div>
       <img
         src={me1}

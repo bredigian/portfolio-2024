@@ -1,14 +1,17 @@
 import { Button } from './ui/button';
 import { FaFileArrowDown } from 'react-icons/fa6';
 import { SOCIAL } from '@/const/social';
+import { useLang } from '@/hooks/use-lang';
 
 export default function Footer() {
+  const { LANG } = useLang();
+
   return (
     <footer className='flex flex-col items-center gap-4 bg-primary p-8'>
       <div className='flex flex-col items-center gap-4 md:flex-row md:items-start md:gap-8'>
         <div className='flex flex-col items-center gap-4 md:items-start'>
           <span className='text-xl font-bold text-primary-foreground'>
-            Redes sociales
+            {LANG.FOOTER.TITLE}
           </span>
           <ul className='flex flex-col gap-4'>
             {SOCIAL.map((item) => (
