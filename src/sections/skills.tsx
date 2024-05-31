@@ -17,7 +17,7 @@ export default function Skills() {
   return (
     <section
       id='#skills'
-      className='flex flex-col items-center gap-4 p-8 md:flex-row'
+      className='flex flex-col items-center gap-4 p-8 text-primary md:flex-row'
       style={{
         minHeight: `${100 - (100 - height)}vh`,
       }}

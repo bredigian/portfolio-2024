@@ -28,7 +28,7 @@ export default function Projects() {
   return (
     <section
       id='#projects'
-      className='relative flex flex-col items-center gap-8 md:items-start'
+      className='relative flex flex-col items-center gap-8 text-primary md:items-start'
       style={{
         minHeight: `${100 - (100 - height)}vh`,
       }}
@@ -64,6 +64,7 @@ export default function Projects() {
       </div>
       {PROJECTS.map((project) => (
         <ProjectGallery
+          key={project.name + '_gallery_key'}
           active={active === project}
           gallery={project.gallery as TGalleryImage[]}
         />
