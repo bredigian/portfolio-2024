@@ -75,7 +75,7 @@ export default function ContactForm() {
                 message: 'El mensaje debe contener al menos 25 caracteres.',
               },
             })}
-            className='w-full lg:text-base'
+            className='w-full resize-none lg:text-base'
             placeholder='Mensaje'
           />
           {errors?.message && (

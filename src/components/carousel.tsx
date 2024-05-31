@@ -6,6 +6,7 @@ type Props = {
   gallery: TGalleryImage[];
   active: boolean;
 };
+
 export const ProjectGallery = ({ gallery, active }: Props) => {
   const [emblaRef] = useEmblaCarousel({ loop: false });
 

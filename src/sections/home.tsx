@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-import { Title } from '@/components/ui/title';
+import TitleSlider from '@/components/title-slider';
 import me1 from '@/assets/me-1.jpg';
 
 export default function Home() {
@@ -21,7 +21,7 @@ export default function Home() {
     >
       <div className='flex flex-col items-center gap-4 text-center md:items-start md:text-start'>
         <span className='text-2xl opacity-75 lg:text-3xl'>¡Hola! Soy</span>
-        <Title>Frontend Developer</Title>
+        <TitleSlider />
         <span className='text-lg opacity-75 lg:text-xl'>
           Mi nombre es <b>Gianluca Bredice Vivarelli</b>, tengo 22 años y soy de
           Argentina.
