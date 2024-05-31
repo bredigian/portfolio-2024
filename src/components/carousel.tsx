@@ -55,7 +55,7 @@ export const ProjectGallery = ({ gallery, active }: Props) => {
         <div className='embla__container flex'>
           {gallery.map((slide) => (
             <div
-              className='embla__slide flex-[0_0_70%] pl-4 sm:flex-[0_0_100%]'
+              className='embla__slide flex-[0_0_70%] cursor-grab pl-4 active:cursor-grabbing sm:flex-[0_0_100%]'
               key={slide.url_desktop + slide.url_mobile}
             >
               <img
