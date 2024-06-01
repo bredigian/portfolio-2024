@@ -4,6 +4,7 @@ import { Label } from '@/components/ui/label';
 import { ReloadIcon } from '@radix-ui/react-icons';
 import { TForm } from '@/types/form.types';
 import { Textarea } from '@/components/ui/textarea';
+import { sendEmail } from '@/services/contact';
 import { toast } from 'sonner';
 import { useForm } from 'react-hook-form';
 import { useLang } from '@/hooks/use-lang';
@@ -17,7 +18,7 @@ export default function ContactForm() {
 
   const onSubmit = async (values: TForm) => {
     try {
-      console.log(values);
+      await sendEmail(values);
       toast.success('Email enviado exitosamente.', { position: 'top-center' });
     } catch (error) {
       if (error instanceof Error) toast.error(error.message);

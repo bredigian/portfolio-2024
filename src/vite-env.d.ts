@@ -1,10 +1,7 @@
 /// <reference types="vite/client" />
 
 interface ImportMetaEnv {
-  readonly VITE_SMTP_HOST: string;
-  readonly VITE_SMTP_PORT: string;
-  readonly VITE_SMTP_USER: string;
-  readonly VITE_SMTP_PASSWORD: string;
+  readonly VITE_API_URL: string;
 }
 
 interface ImportMeta {
