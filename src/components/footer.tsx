@@ -4,7 +4,7 @@ import { SOCIAL } from '@/const/social';
 import { useLang } from '@/hooks/use-lang';
 
 export default function Footer() {
-  const { LANG } = useLang();
+  const { LANG, isEng } = useLang();
 
   return (
     <footer className='flex flex-col items-center gap-4 bg-primary p-8 text-primary-foreground'>
@@ -28,7 +28,15 @@ export default function Footer() {
         </div>
 
         <Button variant='secondary' className=''>
-          <a href='' target='_blank' className='flex items-center gap-4'>
+          <a
+            href={
+              !isEng
+                ? './Gianluca_Bredice_Vivarelli-CV.pdf'
+                : './Gianluca_Bredice_Vivarelli-CV_English.pdf'
+            }
+            target='_blank'
+            className='flex items-center gap-4'
+          >
             <FaFileArrowDown size={24} />
             <span>CV</span>
           </a>
