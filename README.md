@@ -1,30 +1,55 @@
-# React + TypeScript + Vite
+# Portfolio de **Gianluca Bredice Vivarelli**
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este es el repositorio de mi portfolio personal, que muestra algunos de los proyectos en los que he trabajado. Incluye proyectos de desarrollo web, aplicaciones móviles y otros trabajos relevantes.
 
-Currently, two official plugins are available:
+## Tabla de Contenidos
+- [Características](#características)
+- [Tecnologías Utilizadas](#tecnologías-utilizadas)
+- [Instalación](#instalación)
+- [Uso](#uso)
+- [Proyectos Destacados](#proyectos-destacados)
+- [Contacto](#contacto)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Características
+- Landing Page
+- Secciones detallando habilidades dominantes y trabajos realizados
+- Formulario de contacto
 
-## Expanding the ESLint configuration
+## Tecnologías Utilizadas
+- React
+- Vite
+- Tailwind
+- shadcn/ui
+- Embla Carousel
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Instalación
+Para clonar y ejecutar este proyecto localmente, sigue estos pasos:
 
-- Configure the top-level `parserOptions` property like this:
+1. Clona el repositorio
+    ```bash
+    git clone https://github.com/bredigian/portfolio-2024.git
+    ```
+2. Navega al directorio del proyecto
+    ```bash
+    cd portfolio-2024
+    ```
+3. Instala las dependencias
+    ```bash
+    pnpm install
+    ```
+4. Inicia la aplicación
+    ```bash
+    pnpm run dev
+    ```
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-};
-```
+## Uso
+Abre tu navegador web y navega a `http://localhost:5173` para ver el portfolio en acción.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Proyectos Destacados
+- SG Pharma (https://sgmedicinas.com): Página web de farmacia y drogueria SG Pharma, oriunda de Guatemala.
+- MB Peluqueria (https://mbpeluqueria.vercel.app): Sistema de turnos para salon de peluqueria masculina.
+
+
+## Contacto
+- Email: bredicegian@gmail.com o devbredicegian@gmail.com
+- LinkedIn: Gianluca Bredice Vivarelli (https://linkedin.com/in/gianluca-bredice-vivarelli)
