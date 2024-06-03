@@ -26,7 +26,6 @@ export default function Footer() {
             ))}
           </ul>
         </div>
-
         <Button variant='secondary' className=''>
           <a
             href={

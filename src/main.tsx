@@ -15,7 +15,7 @@ const router = createBrowserRouter([
     element: (
       <React.StrictMode>
         <Navbar />
-        <App />,
+        <App />
         <Toaster />
         <Footer />
       </React.StrictMode>
