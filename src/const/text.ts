@@ -49,7 +49,7 @@ export const TEXT = {
       CV_LINK: './Gianluca_Bredice_Vivarelli-CV_English.pdf',
     },
     FOOTER: {
-      TITLE: 'Social',
+      TITLE: 'Made by Gianluca Bredice Vivarelli 🤙',
     },
   },
   ESP: {
@@ -98,7 +98,7 @@ export const TEXT = {
       CV_LINK: './Gianluca_Bredice_Vivarelli-CV.pdf',
     },
     FOOTER: {
-      TITLE: 'Redes sociales',
+      TITLE: 'Hecho por Gianluca Bredice Vivarelli 🤙',
     },
   },
 };
