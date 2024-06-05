@@ -1,5 +1,8 @@
 import { useEffect, useState } from 'react';
 
+import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
+import { SOCIAL } from '@/const/social';
 import TitleSlider from '@/components/title-slider';
 import me1 from '@/assets/me-1.jpg';
 import { useLang } from '@/hooks/use-lang';
@@ -12,7 +15,7 @@ export default function Home() {
     if (nav) setHeight(nav.offsetHeight);
   }, []);
 
-  const { LANG } = useLang();
+  const { LANG, isEng } = useLang();
 
   return (
     <section
@@ -33,6 +36,20 @@ export default function Home() {
           {LANG.HOME.SUBTITLE[2]}
         </span>
         <p className='opacity-75 lg:text-lg'>{LANG.HOME.DESCRIPTION}</p>
+        <ul className='my-6 flex w-full flex-wrap justify-center gap-4 md:justify-start'>
+          {SOCIAL.map((social) => (
+            <li key={social.name + '_key'}>
+              <Link to={social.url} target='_blank'>
+                <Button variant='outline' size='sm' className='flex gap-2'>
+                  <social.icon size={20} />
+                  <span>
+                    {!isEng ? social.name_es ?? social.name : social.name}
+                  </span>
+                </Button>
+              </Link>
+            </li>
+          ))}
+        </ul>
       </div>
       <img
         src={me1}

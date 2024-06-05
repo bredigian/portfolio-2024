@@ -14,7 +14,9 @@ import { Title } from '@/components/ui/title';
 import { useLang } from '@/hooks/use-lang';
 
 export default function Projects() {
-  const [active, setActive] = useState<TProject>(PROJECTS[0]);
+  const [active, setActive] = useState<TProject>(
+    PROJECTS.sort((a, b) => b.date.getTime() - a.date.getTime())[0],
+  );
 
   const [height, setHeight] = useState(100);
 
