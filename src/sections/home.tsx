@@ -39,7 +39,10 @@ export default function Home() {
         <ul className='my-6 flex w-full flex-wrap justify-center gap-4 md:justify-start'>
           {SOCIAL.map((social) => (
             <li key={social.name + '_key'}>
-              <Link to={social.url} target='_blank'>
+              <Link
+                to={!isEng ? social.url_es ?? social.url : social.url}
+                target='_blank'
+              >
                 <Button variant='outline' size='sm' className='flex gap-2'>
                   <social.icon size={20} />
                   <span>
