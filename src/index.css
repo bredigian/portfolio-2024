@@ -78,6 +78,7 @@
     --sb-light-color: #f8fafc;
     --sb-dark-color: #0f172a;
     --sb-size: 8px;
+    font-family: 'Inter';
   }
 
   body::-webkit-scrollbar {
