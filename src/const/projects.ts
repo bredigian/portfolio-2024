@@ -117,7 +117,7 @@ export const PROJECTS: TProject[] = [
       'Manager system for food place developed with Next.js, Tailwind, Shadcn/ui, Prisma, and Nest.js.',
     description_es:
       'Sistema de administracion financiera para cocina desarrollado con Next.js, Tailwind, Shadcn/ui, Prisma y Nest.js',
-    url: undefined,
+    url: 'https://megallon.vercel.app',
     date: new Date(2024, 1, 22),
     gallery: [
       {

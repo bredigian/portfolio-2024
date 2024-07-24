@@ -25,7 +25,6 @@ export default function Me() {
     >
       <div className='flex grow flex-col items-center gap-4 text-center md:items-start md:text-start'>
         <Title>{LANG.ABOUT.TITLE}</Title>
-        <span className='opacity-75 lg:text-lg'>{LANG.ABOUT.SUBTITLE}</span>
         <img
           src={me2}
           className='max-w-64 rounded-2xl object-cover md:max-w-72'

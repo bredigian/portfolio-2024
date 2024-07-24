@@ -1,5 +1,6 @@
 import {
   Card,
+  CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
@@ -57,11 +58,23 @@ export default function Projects() {
         </ul>
         <Card>
           <CardHeader className='flex flex-col gap-4'>
-            <CardTitle>{active?.name}</CardTitle>
+            <CardTitle className='flex w-full items-center justify-between'>
+              {active?.name}
+              <a href={active.url} target='_blank'>
+                <Button variant='outline' className='font-medium'>
+                  {!isEng ? 'Ir al despligue' : 'Go to deploy'}
+                </Button>
+              </a>
+            </CardTitle>
             <CardDescription>
               {!isEng ? active?.description_es : active?.description}
             </CardDescription>
           </CardHeader>
+          <CardContent className='flex flex-col items-center md:items-end'>
+            <span className='text-end text-sm font-medium opacity-75'>
+              {active.date.toLocaleDateString()}
+            </span>
+          </CardContent>
         </Card>
       </div>
       {PROJECTS.map((project) => (
