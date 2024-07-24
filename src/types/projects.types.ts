@@ -2,7 +2,7 @@ export type TProject = {
   name: string;
   description: string;
   description_es: string;
-  url: string | undefined;
+  url: string;
   date: Date;
   gallery?: TGalleryImage[];
 };
