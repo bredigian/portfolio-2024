@@ -57,7 +57,7 @@ export default function Home() {
       <img
         src={me1}
         alt='Gianluca Bredice Vivarelli'
-        className='h-72 w-full max-w-96 grow rounded-2xl object-cover md:h-[550px]'
+        className='h-72 w-full max-w-80 grow rounded-2xl object-cover md:h-[550px] lg:max-w-96'
       />
     </section>
   );
