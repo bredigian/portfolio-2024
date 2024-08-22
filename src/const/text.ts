@@ -36,7 +36,7 @@ export const TEXT = {
       TITLE: 'Me',
       SUBTITLE: 'This is me.',
       DESCRIPTION:
-        'An organized and responsible person, who is constantly learning, and also spends a large part of the day listening to music with headphones. I speak native Spanish and my level of English is basic. I am currently doing freelance work, but I am still looking to find a stable job, in which I can contribute all my skills to the work team and also learn from it.',
+        'Organized, responsible and constantly learning. Music fanatic (mostly electronic music). I speak Spanish natively and I have basic English that allows me to understand texts and dialogues. Nowadays I work as a freelancer, but I am still open to new possibilities in which I can contribute my skills to the work team and also learn from them.',
       LABEL: 'Contact me',
       FORM: {
         NAME: 'Name',
@@ -49,7 +49,7 @@ export const TEXT = {
       CV_LINK: './Gianluca_Bredice_Vivarelli-CV_English.pdf',
     },
     FOOTER: {
-      TITLE: 'Made by Gianluca Bredice Vivarelli 🤙',
+      TITLE: 'Made by Gianluca Bredice Vivarelli',
     },
   },
   ESP: {
@@ -85,7 +85,7 @@ export const TEXT = {
       TITLE: 'Yo',
       SUBTITLE: 'Este soy yo.',
       DESCRIPTION:
-        'Una persona organizada y responsable, quien esta constantemente aprendiendo, y además pasa gran parte del día escuchando música con auriculares. Mi idioma nativo es el Español y mi nivel de Inglés es básico. Actualmente estoy trabajando como freelancer, pero sigo buscando un trabajo estable, en el cual pueda aportar mis habilidades al equipo de trabajo y también aprender de ellos.',
+        'Organizado, responsable y en constante aprendizaje. Fanático de la música (más que nada electrónica). Hablo español nativo y tengo un inglés básico que me permite comprender textos y diálogos. Hoy en día trabajo como freelance, pero sigo abierto a nuevas posibilidades en las cuales pueda aportar mis habilidades al equipo de trabajo y también aprender de ellos.',
       LABEL: 'Contactame',
       FORM: {
         NAME: 'Nombre',
@@ -98,7 +98,7 @@ export const TEXT = {
       CV_LINK: './Gianluca_Bredice_Vivarelli-CV.pdf',
     },
     FOOTER: {
-      TITLE: 'Hecho por Gianluca Bredice Vivarelli 🤙',
+      TITLE: 'Hecho por Gianluca Bredice Vivarelli',
     },
   },
 };
