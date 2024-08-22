@@ -1,6 +1,7 @@
 import {
   FaAws,
   FaDigitalOcean,
+  FaDocker,
   FaGithub,
   FaNodeJs,
   FaReact,
@@ -51,7 +52,7 @@ export const SKILLS: TSkill[] = [
     type: 'frontend',
   },
   {
-    name: 'Node',
+    name: 'Node.js',
     icon: FaNodeJs,
     type: 'backend',
   },
@@ -118,6 +119,11 @@ export const SKILLS: TSkill[] = [
   {
     name: 'GitHub',
     icon: FaGithub,
+    type: 'others',
+  },
+  {
+    name: 'Docker',
+    icon: FaDocker,
     type: 'others',
   },
 ];

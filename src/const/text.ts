@@ -17,7 +17,7 @@ export const TEXT = {
         `, I'm ${age} and I'm from Argentina`,
       ],
       DESCRIPTION:
-        'I currently live in La Plata, in 2020 I started a systems-oriented university career and in March 2022 I began to take different courses and learn by myself different technologies oriented to web development.',
+        'I live in La Plata, I started my career in systems in 2020 and at the beginning of 2022 I started my path as a web developer. Taking different courses and studying independently, I learned and specialized in the different technologies that are used today.',
     },
     SKILLS: {
       TITLE: 'Skills',
@@ -36,7 +36,7 @@ export const TEXT = {
       TITLE: 'Me',
       SUBTITLE: 'This is me.',
       DESCRIPTION:
-        'An organized and responsible person, who is constantly learning, and also spends a large part of the day listening to music with headphones. I speak native Spanish and my level of English is basic. I am currently doing freelance work, but I am still looking to find a stable job, in which I can contribute all my skills to the work team and also learn from it.',
+        'Organized, responsible and constantly learning. Music fanatic (mostly electronic music). I speak Spanish natively and I have basic English that allows me to understand texts and dialogues. Nowadays I work as a freelancer, but I am still open to new possibilities in which I can contribute my skills to the work team and also learn from them.',
       LABEL: 'Contact me',
       FORM: {
         NAME: 'Name',
@@ -49,7 +49,7 @@ export const TEXT = {
       CV_LINK: './Gianluca_Bredice_Vivarelli-CV_English.pdf',
     },
     FOOTER: {
-      TITLE: 'Made by Gianluca Bredice Vivarelli 🤙',
+      TITLE: 'Made by Gianluca Bredice Vivarelli',
     },
   },
   ESP: {
@@ -66,7 +66,7 @@ export const TEXT = {
         `, tengo ${age} años y soy de Argentina`,
       ],
       DESCRIPTION:
-        'Actualmente vivo en La Plata, inicié mi carrera orientada a sistemas en 2020 y a principios del 2022 emprendí camino como desarrollador web. Tomando diferentes cursos y estudiando de forma autonoma, fui aprendiendo y especializandome en las diferentes tecnologias que se utilizan hoy en día.',
+        'Vivo en La Plata, inicié mi carrera orientada a sistemas en 2020 y a principios del 2022 emprendí camino como desarrollador web. Tomando diferentes cursos y estudiando de forma autónoma, fui aprendiendo y especializandome en las diferentes tecnologías que se utilizan hoy en día.',
     },
     SKILLS: {
       TITLE: 'Habilidades',
@@ -85,7 +85,7 @@ export const TEXT = {
       TITLE: 'Yo',
       SUBTITLE: 'Este soy yo.',
       DESCRIPTION:
-        'Una persona organizada y responsable, quien esta constantemente aprendiendo, y además pasa gran parte del día escuchando música con auriculares. Mi idioma nativo es el Español y mi nivel de Inglés es básico. Actualmente estoy trabajando como freelancer, pero sigo buscando un trabajo estable, en el cual pueda aportar mis habilidades al equipo de trabajo y también aprender de ellos.',
+        'Organizado, responsable y en constante aprendizaje. Fanático de la música (más que nada electrónica). Hablo español nativo y tengo un inglés básico que me permite comprender textos y diálogos. Hoy en día trabajo como freelance, pero sigo abierto a nuevas posibilidades en las cuales pueda aportar mis habilidades al equipo de trabajo y también aprender de ellos.',
       LABEL: 'Contactame',
       FORM: {
         NAME: 'Nombre',
@@ -98,7 +98,7 @@ export const TEXT = {
       CV_LINK: './Gianluca_Bredice_Vivarelli-CV.pdf',
     },
     FOOTER: {
-      TITLE: 'Hecho por Gianluca Bredice Vivarelli 🤙',
+      TITLE: 'Hecho por Gianluca Bredice Vivarelli',
     },
   },
 };
