@@ -17,7 +17,7 @@ export const TEXT = {
         `, I'm ${age} and I'm from Argentina`,
       ],
       DESCRIPTION:
-        'I currently live in La Plata, in 2020 I started a systems-oriented university career and in March 2022 I began to take different courses and learn by myself different technologies oriented to web development.',
+        'I live in La Plata, I started my career in systems in 2020 and at the beginning of 2022 I started my path as a web developer. Taking different courses and studying independently, I learned and specialized in the different technologies that are used today.',
     },
     SKILLS: {
       TITLE: 'Skills',
@@ -66,7 +66,7 @@ export const TEXT = {
         `, tengo ${age} años y soy de Argentina`,
       ],
       DESCRIPTION:
-        'Actualmente vivo en La Plata, inicié mi carrera orientada a sistemas en 2020 y a principios del 2022 emprendí camino como desarrollador web. Tomando diferentes cursos y estudiando de forma autonoma, fui aprendiendo y especializandome en las diferentes tecnologias que se utilizan hoy en día.',
+        'Vivo en La Plata, inicié mi carrera orientada a sistemas en 2020 y a principios del 2022 emprendí camino como desarrollador web. Tomando diferentes cursos y estudiando de forma autónoma, fui aprendiendo y especializandome en las diferentes tecnologías que se utilizan hoy en día.',
     },
     SKILLS: {
       TITLE: 'Habilidades',
