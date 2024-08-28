@@ -52,7 +52,7 @@ export const ProjectGallery = ({ gallery, active }: Props) => {
       )}
     >
       <div className='embla__viewport overflow-hidden' ref={emblaRef}>
-        <div className='embla__container flex'>
+        <div className='embla__container flex first:ml-4 last:mr-8 '>
           {gallery.map((slide) => (
             <div
               className='embla__slide flex-[0_0_70%] cursor-grab pl-4 active:cursor-grabbing sm:flex-[0_0_100%]'
