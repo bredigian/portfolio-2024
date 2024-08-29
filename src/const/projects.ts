@@ -20,16 +20,28 @@ import ilMobile2 from '@/assets/screenshots/iluminarte/mobile/il-2.jpg';
 import ilMobile3 from '@/assets/screenshots/iluminarte/mobile/il-3.jpg';
 import ilMobile4 from '@/assets/screenshots/iluminarte/mobile/il-4.jpg';
 //MB Peluqueria Images
-import mbpeluqueria1 from '@/assets/screenshots/mbpeluqueria/mb-1.jpg';
-import mbpeluqueria2 from '@/assets/screenshots/mbpeluqueria/mb-2.jpg';
-import mbpeluqueria3 from '@/assets/screenshots/mbpeluqueria/mb-3.jpg';
-import mbpeluqueria4 from '@/assets/screenshots/mbpeluqueria/mb-4.jpg';
-import mbpeluqueria5 from '@/assets/screenshots/mbpeluqueria/mb-5.jpg';
-import mbpeluqueriaMobile1 from '@/assets/screenshots/mbpeluqueria/mobile/mb-1.jpg';
-import mbpeluqueriaMobile2 from '@/assets/screenshots/mbpeluqueria/mobile/mb-2.jpg';
-import mbpeluqueriaMobile3 from '@/assets/screenshots/mbpeluqueria/mobile/mb-3.jpg';
-import mbpeluqueriaMobile4 from '@/assets/screenshots/mbpeluqueria/mobile/mb-4.jpg';
-import mbpeluqueriaMobile5 from '@/assets/screenshots/mbpeluqueria/mobile/mb-5.jpg';
+import mbpeluqueriaDesktopLight1 from '@/assets/screenshots/mbpeluqueria/desktop-light-1.png';
+import mbpeluqueriaDesktopLight10 from '@/assets/screenshots/mbpeluqueria/desktop-light-10.png';
+import mbpeluqueriaDesktopLight11 from '@/assets/screenshots/mbpeluqueria/desktop-light-11.png';
+import mbpeluqueriaDesktopLight2 from '@/assets/screenshots/mbpeluqueria/desktop-light-2.png';
+import mbpeluqueriaDesktopLight3 from '@/assets/screenshots/mbpeluqueria/desktop-light-3.png';
+import mbpeluqueriaDesktopLight4 from '@/assets/screenshots/mbpeluqueria/desktop-light-4.png';
+import mbpeluqueriaDesktopLight5 from '@/assets/screenshots/mbpeluqueria/desktop-light-5.png';
+import mbpeluqueriaDesktopLight6 from '@/assets/screenshots/mbpeluqueria/desktop-light-6.png';
+import mbpeluqueriaDesktopLight7 from '@/assets/screenshots/mbpeluqueria/desktop-light-7.png';
+import mbpeluqueriaDesktopLight8 from '@/assets/screenshots/mbpeluqueria/desktop-light-8.png';
+import mbpeluqueriaDesktopLight9 from '@/assets/screenshots/mbpeluqueria/desktop-light-9.png';
+import mbpeluqueriaMobileLight1 from '@/assets/screenshots/mbpeluqueria/mobile/mobile-light-1.png';
+import mbpeluqueriaMobileLight10 from '@/assets/screenshots/mbpeluqueria/mobile/mobile-light-10.png';
+import mbpeluqueriaMobileLight11 from '@/assets/screenshots/mbpeluqueria/mobile/mobile-light-11.png';
+import mbpeluqueriaMobileLight2 from '@/assets/screenshots/mbpeluqueria/mobile/mobile-light-2.png';
+import mbpeluqueriaMobileLight3 from '@/assets/screenshots/mbpeluqueria/mobile/mobile-light-3.png';
+import mbpeluqueriaMobileLight4 from '@/assets/screenshots/mbpeluqueria/mobile/mobile-light-4.png';
+import mbpeluqueriaMobileLight5 from '@/assets/screenshots/mbpeluqueria/mobile/mobile-light-5.png';
+import mbpeluqueriaMobileLight6 from '@/assets/screenshots/mbpeluqueria/mobile/mobile-light-6.png';
+import mbpeluqueriaMobileLight7 from '@/assets/screenshots/mbpeluqueria/mobile/mobile-light-7.png';
+import mbpeluqueriaMobileLight8 from '@/assets/screenshots/mbpeluqueria/mobile/mobile-light-8.png';
+import mbpeluqueriaMobileLight9 from '@/assets/screenshots/mbpeluqueria/mobile/mobile-light-9.png';
 //Megallon Images
 import megallon1 from '@/assets/screenshots/megallon/megallon-1.jpg';
 import megallon10 from '@/assets/screenshots/megallon/megallon-10.jpg';
@@ -82,32 +94,54 @@ import sgMobile9 from '@/assets/screenshots/sgpharma/mobile/sg-9.jpg';
 export const PROJECTS: TProject[] = [
   {
     name: 'MB Peluquería',
-    description:
-      'Shifts system for a hair salon developed with Next.js, Tailwind, and MongoDB.',
-    description_es:
-      'Sistema de turnos para un salon de peluqueria desarrollado con Next.js, Tailwind y MongoDB',
+    description: `Shifts system for a hair salon developed with Next.js, TailwindCSS, Express.js, and PostgreSQL. *The system was updated to V2 on ${new Date(2024, 6, 11).toLocaleDateString()}.`,
+    description_es: `Sistema de turnos para un salon de peluqueria desarrollado con Next.js, TailwindCSS, Express.js y PostgreSQL. *El sistema se actualizó a la V2 el ${new Date(2024, 6, 11).toLocaleDateString()}`,
     url: 'https://mbpeluqueria.vercel.app',
     date: new Date(2023, 9, 3),
     gallery: [
       {
-        url_desktop: mbpeluqueria1,
-        url_mobile: mbpeluqueriaMobile1,
+        url_desktop: mbpeluqueriaDesktopLight1,
+        url_mobile: mbpeluqueriaMobileLight1,
       },
       {
-        url_desktop: mbpeluqueria2,
-        url_mobile: mbpeluqueriaMobile2,
+        url_desktop: mbpeluqueriaDesktopLight2,
+        url_mobile: mbpeluqueriaMobileLight2,
       },
       {
-        url_desktop: mbpeluqueria3,
-        url_mobile: mbpeluqueriaMobile3,
+        url_desktop: mbpeluqueriaDesktopLight3,
+        url_mobile: mbpeluqueriaMobileLight3,
       },
       {
-        url_desktop: mbpeluqueria4,
-        url_mobile: mbpeluqueriaMobile4,
+        url_desktop: mbpeluqueriaDesktopLight4,
+        url_mobile: mbpeluqueriaMobileLight4,
       },
       {
-        url_desktop: mbpeluqueria5,
-        url_mobile: mbpeluqueriaMobile5,
+        url_desktop: mbpeluqueriaDesktopLight5,
+        url_mobile: mbpeluqueriaMobileLight5,
+      },
+      {
+        url_desktop: mbpeluqueriaDesktopLight6,
+        url_mobile: mbpeluqueriaMobileLight6,
+      },
+      {
+        url_desktop: mbpeluqueriaDesktopLight7,
+        url_mobile: mbpeluqueriaMobileLight7,
+      },
+      {
+        url_desktop: mbpeluqueriaDesktopLight8,
+        url_mobile: mbpeluqueriaMobileLight8,
+      },
+      {
+        url_desktop: mbpeluqueriaDesktopLight9,
+        url_mobile: mbpeluqueriaMobileLight9,
+      },
+      {
+        url_desktop: mbpeluqueriaDesktopLight10,
+        url_mobile: mbpeluqueriaMobileLight10,
+      },
+      {
+        url_desktop: mbpeluqueriaDesktopLight11,
+        url_mobile: mbpeluqueriaMobileLight11,
       },
     ],
   },
