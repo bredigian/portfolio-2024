@@ -148,9 +148,9 @@ export const PROJECTS: TProject[] = [
   {
     name: 'Megallón',
     description:
-      'Manager system for food place developed with Next.js, Tailwind, Shadcn/ui, Prisma, and Nest.js.',
+      'Manager system for food place developed with Next.js, TailwindCSS, Shadcn/ui, Prisma, and Nest.js.',
     description_es:
-      'Sistema de administracion financiera para cocina desarrollado con Next.js, Tailwind, Shadcn/ui, Prisma y Nest.js',
+      'Sistema de administracion financiera para cocina desarrollado con Next.js, TailwindCSS, Shadcn/ui, Prisma y Nest.js',
     url: 'https://megallon.vercel.app',
     date: new Date(2024, 1, 22),
     gallery: [
@@ -242,9 +242,9 @@ export const PROJECTS: TProject[] = [
   {
     name: 'Iluminarte',
     description:
-      'Candle website developed with React, Tailwind, NodeJS, and MySQL',
+      'Candle website developed with React.js, TailwindCSS, Node.js, and MySQL',
     description_es:
-      'Sitio web de velas desarrollado con React, Tailwind, Node.js y MySQL',
+      'Sitio web de velas desarrollado con React.js, TailwindCSS, Node.js y MySQL',
     url: 'https://iluminarte.vercel.app',
     date: new Date(2023, 6, 4),
     gallery: [
@@ -269,9 +269,9 @@ export const PROJECTS: TProject[] = [
   {
     name: 'SG Pharma',
     description:
-      'Pharmacy company website developed with React, Tailwind, NodeJS, and MySQL',
+      'Pharmacy company website developed with React.js, TailwindCSS, Node.js, and MySQL',
     description_es:
-      'Sitio web de la compañia farmaceutica SG Pharma desarrollado con React, Tailwind, Node.js y MySQL',
+      'Sitio web de la compañia farmaceutica SG Pharma desarrollado con React.js, TailwindCSS, Node.js y MySQL',
     url: 'https://sgmedicinas.com',
     date: new Date(2023, 7, 26),
     gallery: [

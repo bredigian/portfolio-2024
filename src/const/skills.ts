@@ -3,10 +3,13 @@ import {
   FaDigitalOcean,
   FaDocker,
   FaGithub,
+  FaJava,
   FaNodeJs,
   FaReact,
 } from 'react-icons/fa6';
 import {
+  SiJavascript,
+  SiLinux,
   SiMicrosoftazure,
   SiMongodb,
   SiMysql,
@@ -19,6 +22,7 @@ import {
   SiShadcnui,
   SiSpringboot,
   SiTailwindcss,
+  SiTypescript,
 } from 'react-icons/si';
 
 import { BsGit } from 'react-icons/bs';
@@ -27,7 +31,17 @@ import { TbBrandNextjs } from 'react-icons/tb';
 
 export const SKILLS: TSkill[] = [
   {
-    name: 'React',
+    name: 'JavaScript',
+    icon: SiJavascript,
+    type: 'frontend',
+  },
+  {
+    name: 'TypeScript',
+    icon: SiTypescript,
+    type: 'frontend',
+  },
+  {
+    name: 'React.js',
     icon: FaReact,
     type: 'frontend',
   },
@@ -37,7 +51,7 @@ export const SKILLS: TSkill[] = [
     type: 'frontend',
   },
   {
-    name: 'Tailwind',
+    name: 'TailwindCSS',
     icon: SiTailwindcss,
     type: 'frontend',
   },
@@ -59,6 +73,11 @@ export const SKILLS: TSkill[] = [
   {
     name: 'Nest.js',
     icon: SiNestjs,
+    type: 'backend',
+  },
+  {
+    name: 'Java',
+    icon: FaJava,
     type: 'backend',
   },
   {
@@ -124,6 +143,11 @@ export const SKILLS: TSkill[] = [
   {
     name: 'Docker',
     icon: FaDocker,
+    type: 'others',
+  },
+  {
+    name: 'Linux',
+    icon: SiLinux,
     type: 'others',
   },
 ];
