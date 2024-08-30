@@ -11,6 +11,11 @@ export const ROUTES: TRoute[] = [
     name_eng: 'Home',
   },
   {
+    id: 'education',
+    name: 'Educación',
+    name_eng: 'Education',
+  },
+  {
     id: 'skills',
     name: 'Habilidades',
     name_eng: 'Skills',

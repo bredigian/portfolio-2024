@@ -19,6 +19,10 @@ export const TEXT = {
       DESCRIPTION:
         'I live in La Plata, I started my career in systems in 2020 and at the beginning of 2022 I started my path as a web developer. Taking different courses and studying independently, I learned and specialized in the different technologies that are used today.',
     },
+    EDUCATION: {
+      TITLE: 'Education',
+      SUBTITLE: 'Training I took to become who I am today.',
+    },
     SKILLS: {
       TITLE: 'Skills',
       SUBTITLE:
@@ -67,6 +71,10 @@ export const TEXT = {
       ],
       DESCRIPTION:
         'Vivo en La Plata, inicié mi carrera orientada a sistemas en 2020 y a principios del 2022 emprendí camino como desarrollador web. Tomando diferentes cursos y estudiando de forma autónoma, fui aprendiendo y especializandome en las diferentes tecnologías que se utilizan hoy en día.',
+    },
+    EDUCATION: {
+      TITLE: 'Educación',
+      SUBTITLE: 'Formación que realicé para llegar a quien soy hoy en día.',
     },
     SKILLS: {
       TITLE: 'Habilidades',
