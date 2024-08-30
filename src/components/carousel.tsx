@@ -72,7 +72,7 @@ export const ProjectGallery = ({ gallery, active }: Props) => {
           ))}
         </div>
       </div>
-      <div className='embla__controls flex flex-row items-center justify-center gap-2 p-4 md:justify-start'>
+      <div className='embla__controls flex flex-row items-center justify-center gap-2 p-4 md:ml-4 md:justify-start'>
         <Button
           onClick={onPrevButtonClick}
           disabled={prevBtnDisabled}

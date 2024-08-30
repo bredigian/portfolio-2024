@@ -60,7 +60,10 @@ export default function Navbar() {
       <nav className='w-full'>
         <ul className='flex items-center justify-center gap-4'>
           {ROUTES.map((route) => (
-            <li key={route.id}>
+            <li
+              key={route.id}
+              className='xsm:first:block text-sm first:hidden sm:text-base'
+            >
               <Link
                 to={`#${route.id}`}
                 smooth
