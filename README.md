@@ -5,8 +5,6 @@ Este es el repositorio de mi portfolio personal, que muestra algunos de los proy
 ## Tabla de Contenidos
 - [Características](#características)
 - [Tecnologías Utilizadas](#tecnologías-utilizadas)
-- [Instalación](#instalación)
-- [Uso](#uso)
 - [Proyectos Destacados](#proyectos-destacados)
 - [Contacto](#contacto)
 
@@ -26,7 +24,6 @@ Este es el repositorio de mi portfolio personal, que muestra algunos de los proy
 - SG Pharma (https://sgmedicinas.com): Página web de farmacia y drogueria SG Pharma, oriunda de Guatemala.
 - MB Peluqueria (https://mbpeluqueria.vercel.app): Sistema de turnos para salon de peluqueria masculina.
 - Megallón: Sistema administrativo para PyME Alimentaria. Stock de productos, clientes, ventas, ingresos, estadísticas, etc...
-
 
 ## Contacto
 - Email: bredicegian@gmail.com o devbredicegian@gmail.com
