@@ -47,6 +47,11 @@ export const SKILLS: TSkill[] = [
     type: 'frontend',
   },
   {
+    name: 'React Native',
+    icon: FaReact,
+    type: 'frontend',
+  },
+  {
     name: 'Next.js',
     icon: TbBrandNextjs,
     type: 'frontend',
