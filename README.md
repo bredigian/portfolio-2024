@@ -16,38 +16,16 @@ Este es el repositorio de mi portfolio personal, que muestra algunos de los proy
 - Formulario de contacto
 
 ## Tecnologías Utilizadas
-- React
+- React.js
 - Vite
-- Tailwind
+- TailwindCSS
 - shadcn/ui
 - Embla Carousel
-
-## Instalación
-Para clonar y ejecutar este proyecto localmente, sigue estos pasos:
-
-1. Clona el repositorio
-    ```bash
-    git clone https://github.com/bredigian/portfolio-2024.git
-    ```
-2. Navega al directorio del proyecto
-    ```bash
-    cd portfolio-2024
-    ```
-3. Instala las dependencias
-    ```bash
-    pnpm install
-    ```
-4. Inicia la aplicación
-    ```bash
-    pnpm run dev
-    ```
-
-## Uso
-Abre tu navegador web y navega a `http://localhost:5173` para ver el portfolio en acción.
 
 ## Proyectos Destacados
 - SG Pharma (https://sgmedicinas.com): Página web de farmacia y drogueria SG Pharma, oriunda de Guatemala.
 - MB Peluqueria (https://mbpeluqueria.vercel.app): Sistema de turnos para salon de peluqueria masculina.
+- Megallón: Sistema administrativo para PyME Alimentaria. Stock de productos, clientes, ventas, ingresos, estadísticas, etc...
 
 
 ## Contacto
