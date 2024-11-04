@@ -35,7 +35,7 @@ export default function Education() {
 
           return (
             <li key={item.title} className='flex w-full gap-4'>
-              <span className='mt-1 size-2 -translate-x-[5px] rounded-full bg-primary'></span>
+              <span className='mr-1 mt-0.5 size-5 -translate-x-[11px] rounded-full border-4 border-primary-foreground bg-primary'></span>
               <div className='flex flex-col items-start gap-1'>
                 <span className='text-start'>
                   {!isEng ? item.title : item.engTitle}
