@@ -62,7 +62,7 @@ export default function Navbar() {
           {ROUTES.map((route) => (
             <li
               key={route.id}
-              className='xsm:first:block text-sm first:hidden sm:text-base'
+              className='text-sm first:hidden xsm:first:block sm:text-base'
             >
               <Link
                 to={`#${route.id}`}

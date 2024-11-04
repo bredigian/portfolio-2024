@@ -1,9 +1,4 @@
-import {
-  FaFileArrowDown,
-  FaGithub,
-  FaInstagram,
-  FaTelegram,
-} from 'react-icons/fa6';
+import { FaFileArrowDown, FaGithub, FaTelegram } from 'react-icons/fa6';
 
 import { BsLinkedin } from 'react-icons/bs';
 import { TSocial } from '@/types/social.types';
@@ -13,11 +8,6 @@ export const SOCIAL: TSocial[] = [
     name: 'Telegram',
     icon: FaTelegram,
     url: 'tg://resolve?domain=bredigian',
-  },
-  {
-    name: 'Instagram',
-    icon: FaInstagram,
-    url: 'https://instagram.com/gianlucabredice',
   },
   {
     name: 'LinkedIn',
@@ -30,8 +20,8 @@ export const SOCIAL: TSocial[] = [
     url: 'https://github.com/bredigian',
   },
   {
-    name: 'Resume',
-    name_es: 'CV',
+    name: 'Download CV',
+    name_es: 'Descargar CV',
     icon: FaFileArrowDown,
     url: './Gianluca_Bredice_Vivarelli-CV_English.pdf',
     url_es: './Gianluca_Bredice_Vivarelli-CV.pdf',
