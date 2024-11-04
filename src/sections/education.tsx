@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 
-import { Title } from '@/components/ui/title';
-import { EDUCATION } from '@/const/education';
 import { DateTime } from 'luxon';
+import { EDUCATION } from '@/const/education';
+import { Title } from '@/components/ui/title';
 import { useLang } from '@/hooks/use-lang';
 
 export default function Education() {
@@ -34,7 +34,7 @@ export default function Education() {
           const endDate = DateTime.fromJSDate(item?.endDate);
 
           return (
-            <li className='flex w-full gap-4'>
+            <li key={item.title} className='flex w-full gap-4'>
               <span className='mt-1 size-2 -translate-x-[5px] rounded-full bg-primary'></span>
               <div className='flex flex-col items-start gap-1'>
                 <span className='text-start'>

@@ -20,7 +20,7 @@ export default function Home() {
   return (
     <section
       id='#home'
-      className='flex flex-col items-center justify-center gap-4 p-8 text-primary md:flex-row'
+      className='flex flex-col items-center justify-center gap-5 p-8 text-primary md:flex-row'
       style={{
         minHeight: `${100 - (100 - height)}vh`,
       }}

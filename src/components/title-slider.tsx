@@ -12,11 +12,11 @@ export default function TitleSlider() {
   return (
     <div className='embla'>
       <div className='embla__viewport overflow-hidden' ref={emblaRef}>
-        <div className='embla__container flex h-28 cursor-grab flex-col active:cursor-grabbing sm:h-20 md:h-28 lg:h-20'>
+        <div className='embla__container flex h-[88px] cursor-grab flex-col active:cursor-grabbing sm:h-12 md:h-[88px] lg:h-14'>
           {TITLES.map((title) => (
             <div
               key={title + '_key'}
-              className='embla__slide min-h-0 shrink-0 grow basis-full pt-4'
+              className='embla__slide min-h-0 shrink-0 grow basis-full pt-1'
             >
               <Title className='w-min select-none sm:w-fit md:w-min lg:w-fit'>
                 {title}
