@@ -1,3 +1,10 @@
+import {
+  Card,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card';
 import { useEffect, useState } from 'react';
 
 import { DateTime } from 'luxon';
@@ -26,7 +33,7 @@ export default function Education() {
         <Title>{LANG.EDUCATION.TITLE}</Title>
         <span className='opacity-75 lg:text-lg'>{LANG.EDUCATION.SUBTITLE}</span>
       </div>
-      <ul className='flex flex-col gap-4 border-l-2 border-primary/25'>
+      <ul className='grid w-full grid-cols-8 gap-4'>
         {EDUCATION.sort(
           (a, b) => (b.endDate?.getTime() as number) - a.endDate?.getTime(),
         ).map((item) => {
@@ -34,40 +41,51 @@ export default function Education() {
           const endDate = DateTime.fromJSDate(item?.endDate);
 
           return (
-            <li key={item.title} className='flex w-full gap-4'>
-              <span className='mr-1 mt-0.5 size-5 -translate-x-[11px] rounded-full border-4 border-primary-foreground bg-primary'></span>
-              <div className='flex flex-col items-start gap-1'>
-                <span className='text-start'>
-                  {!isEng ? item.title : item.engTitle}
-                </span>
-                <small>{!isEng ? item.placeName : item.engPlaceName}</small>
-                {!item.placeName.includes('UNLP') ? (
-                  <small>
-                    {startDate.monthShort?.concat(
-                      ' ',
-                      startDate.year.toString(),
-                    )}{' '}
-                    - {endDate.monthShort?.concat(' ', endDate.year.toString())}
-                  </small>
-                ) : (
-                  <small>
-                    {startDate.monthShort?.concat(
-                      ' ',
-                      startDate.year.toString(),
-                    )}{' '}
-                    - Act
-                  </small>
-                )}
-                {item.certification && (
-                  <a
-                    href={item.certification}
-                    target='_blank'
-                    className='text-xs underline'
-                  >
-                    {!isEng ? 'Certificación' : 'Certification'}
-                  </a>
-                )}
-              </div>
+            <li
+              key={item.title}
+              className='col-span-full md:col-span-4 md:[&:nth-child(1)]:col-span-3 md:[&:nth-child(2)]:col-span-5  md:[&:nth-child(3)]:col-span-6 md:[&:nth-child(4)]:col-span-2'
+            >
+              <Card className='w-full'>
+                <CardHeader>
+                  <CardTitle className='overflow-hidden text-ellipsis text-nowrap'>
+                    {!isEng ? item.title : item.engTitle}
+                  </CardTitle>
+                  <CardDescription>
+                    {!isEng ? item.placeName : item.engPlaceName}
+                  </CardDescription>
+                </CardHeader>
+                <CardFooter className='flex flex-col items-start gap-1'>
+                  {!item.placeName.includes('UNLP') ? (
+                    <span className='text-sm'>
+                      {startDate.monthShort?.concat(
+                        ' ',
+                        startDate.year.toString(),
+                      )}{' '}
+                      -{' '}
+                      {endDate.monthShort?.concat(' ', endDate.year.toString())}
+                    </span>
+                  ) : (
+                    <span className='text-sm'>
+                      {startDate.monthShort?.concat(
+                        ' ',
+                        startDate.year.toString(),
+                      )}{' '}
+                      - Act
+                    </span>
+                  )}
+                  {item.certification ? (
+                    <a
+                      href={item.certification}
+                      target='_blank'
+                      className='text-sm underline'
+                    >
+                      {!isEng ? 'Certificación' : 'Certification'}
+                    </a>
+                  ) : (
+                    <span className='text-sm opacity-50'>No disponible</span>
+                  )}
+                </CardFooter>
+              </Card>
             </li>
           );
         })}
