@@ -58,8 +58,8 @@ export default function Projects() {
         </ul>
         <Card>
           <CardHeader className='flex flex-col gap-4'>
-            <CardTitle className='flex w-full items-center justify-between'>
-              {active?.name}
+            <CardTitle className='flex w-full items-center justify-between gap-4'>
+              <span className=''>{active?.name}</span>
               <a href={active.url} target='_blank'>
                 <Button variant='outline' className='font-medium'>
                   {!isEng ? 'Ir al despligue' : 'Go to deploy'}
@@ -77,7 +77,7 @@ export default function Projects() {
           </CardContent>
         </Card>
       </div>
-      {PROJECTS.map((project) => (
+      {PROJECTS?.map((project) => (
         <ProjectGallery
           key={project.name + '_gallery_key'}
           active={active === project}

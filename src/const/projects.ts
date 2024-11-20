@@ -10,6 +10,9 @@ import caMobile2 from '@/assets/screenshots/casatomada/mobile/ca-2.jpg';
 import caMobile3 from '@/assets/screenshots/casatomada/mobile/ca-3.jpg';
 import caMobile4 from '@/assets/screenshots/casatomada/mobile/ca-4.jpg';
 import caMobile5 from '@/assets/screenshots/casatomada/mobile/ca-5.jpg';
+//Dolar BNA API Images
+import dba1 from '@/assets/screenshots/dolar-bna-api/dba-1.png';
+import dba1Mobile from '@/assets/screenshots/dolar-bna-api/mobile/dba-1.png';
 //Iluminarte Images
 import il1 from '@/assets/screenshots/iluminarte/il-1.jpg';
 import il2 from '@/assets/screenshots/iluminarte/il-2.jpg';
@@ -316,5 +319,15 @@ export const PROJECTS: TProject[] = [
         url_mobile: sgMobile10,
       },
     ],
+  },
+  {
+    name: 'Dolar BNA API',
+    date: new Date(2024, 7, 20),
+    description_es:
+      'API pública generada a partir de un web scraping para la obtención de valores del dolar emitido por el Banco de la Nación Argentina. Hecho con Express.js, TypeScript y Playwright',
+    url: 'https://dolar-bna-api.vercel.app',
+    description:
+      'Public API generated from web scraping for get the values of the dollar ossued by Banco Nación de la Nación Argentina. Made with Express.js, TypeScript and Playwright.',
+    gallery: [{ url_desktop: dba1, url_mobile: dba1Mobile }],
   },
 ];
